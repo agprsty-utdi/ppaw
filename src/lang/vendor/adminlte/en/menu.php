@@ -12,6 +12,7 @@ return [
     'level_one'                     => 'Level 1',
     'level_two'                     => 'Level 2',
     'level_three'                   => 'Level 3',
+    'mst-pangkat'                   => 'Pangkat Golongan',
     'labels'                        => 'LABELS',
     'important'                     => 'Important',
     'warning'                       => 'Warning',
