@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MstPangkatController;
+use App\Http\Controllers\MstJabatanController;
+use App\Http\Controllers\PegawaiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,5 @@ Route::get('/home', function() {
 })->name('home')->middleware('auth');
 
 Route::resource('mst-pangkat', MstPangkatController::class);
+Route::resource('mst-jabatan', MstJabatanController::class);
+Route::resource('pegawai', PegawaiController::class);

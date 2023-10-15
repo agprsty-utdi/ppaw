@@ -339,15 +339,15 @@ return [
                 ],
                 [
                     'text' => 'Jabatan Struktural',
-                    'url'  => '#',
-                ],
+                    'url'  => 'mst-jabatan',
+                ]
             ],
         ],
         ['header' => 'labels'],
         [
-            'text'       => 'important',
+            'text'       => 'Pegawai',
             'icon_color' => 'red',
-            'url'        => '#',
+            'url'        => 'pegawai',
         ],
         [
             'text'       => 'warning',
