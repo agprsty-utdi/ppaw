@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MstPangkatController;
 use App\Http\Controllers\MstJabatanController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\RiwayatPangkatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,19 @@ Route::get('/home', function() {
 Route::resource('mst-pangkat', MstPangkatController::class);
 Route::resource('mst-jabatan', MstJabatanController::class);
 Route::resource('pegawai', PegawaiController::class);
+Route::get('/riwayat-pangkat',[RiwayatPangkatController::class, 'index']);
+Route::get('/riwayat-pangkat/proses/{id}',[RiwayatPangkatController::class, 'proses'])
+    ->name('riwayat-pangkat.index1');
+Route::get('/riwayat-pangkat/cetak/{id}',[RiwayatPangkatController::class, 'cetak'])
+    ->name('riwayat-pangkat.cetak');
+Route::get('/riwayat-pangkat/create/{id}',[RiwayatPangkatController::class, 'create']);
+Route::post('/riwayat-pangkat/store',[RiwayatPangkatController::class, 'store'])
+    ->name('riwayat-pangkat.store');
+Route::get('/riwayat-pangkat/{id}/edit',[RiwayatPangkatController::class, 'edit'])
+    ->name('riwayat-pangkat.edit');
+Route::patch('/riwayat-pangkat/update/{id}',[RiwayatPangkatController::class, 'update'])
+    ->name('riwayat-pangkat.update');
+Route::get('/riwayat-pangkat/show/{id}',[RiwayatPangkatController::class, 'show'])
+    ->name('riwayat-pangkat.show');
+Route::delete('/riwayat-pangkat/destroy/{id}',[RiwayatPangkatController::class, 'destroy'])
+    ->name('riwayat-pangkat.destroy');

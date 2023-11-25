@@ -350,6 +350,11 @@ return [
             'url'        => 'pegawai',
         ],
         [
+            'text'       => 'Kenaikan Pangkat',
+            'icon_color' => 'red',
+            'url'        => 'riwayat-pangkat',
+        ],
+        [
             'text'       => 'warning',
             'icon_color' => 'yellow',
             'url'        => '#',
