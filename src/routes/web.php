@@ -5,6 +5,7 @@ use App\Http\Controllers\MstPangkatController;
 use App\Http\Controllers\MstJabatanController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\RiwayatPangkatController;
+use App\Http\Controllers\GajiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,8 @@ Route::get('/home', function() {
 Route::resource('mst-pangkat', MstPangkatController::class);
 Route::resource('mst-jabatan', MstJabatanController::class);
 Route::resource('pegawai', PegawaiController::class);
+
+# Riwayat Pangkat
 Route::get('/riwayat-pangkat',[RiwayatPangkatController::class, 'index']);
 Route::get('/riwayat-pangkat/proses/{id}',[RiwayatPangkatController::class, 'proses'])
     ->name('riwayat-pangkat.index1');
@@ -48,3 +51,11 @@ Route::get('/riwayat-pangkat/show/{id}',[RiwayatPangkatController::class, 'show'
     ->name('riwayat-pangkat.show');
 Route::delete('/riwayat-pangkat/destroy/{id}',[RiwayatPangkatController::class, 'destroy'])
     ->name('riwayat-pangkat.destroy');
+
+# Gaji
+Route::get('/gaji',[GajiController::class, 'index']);
+Route::get('/gaji/create',[GajiController::class, 'create']);
+Route::post('/gaji/store',[GajiController::class, 'store'])
+    ->name('gaji.store');
+Route::get('/gaji/show/{id}',[GajiController::class, 'show'])
+    ->name('gaji.show');

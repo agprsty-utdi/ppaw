@@ -77,9 +77,9 @@ class Pegawai extends Model
             return $g->gaji_pokok;
     }
 
-    public function getTunjangan($id)
+    public static function getTunjangan($id)
     {
-        $g = DB::table('mst_jabatan')->where('id',$id)->first();
+        $g = DB::table('mst_jabatans')->where('id',$id)->first();
 
         if ($g==null) //jika tidak ada
             return 0;
@@ -104,7 +104,7 @@ class Pegawai extends Model
         }
     }
 
-    static function masaKerjaGol($id)
+    public static function masaKerjaGol($id)
     {
         //menghitung masa kerja golongan
         $pangkat = \App\Models\RiwayatPangkat::where('status',1)
@@ -123,4 +123,15 @@ class Pegawai extends Model
         //hasilnya tahun dan bulan
         return $masa->y." tahun, ".$masa->m." bulan";
     }
+
+    public static function getGajiPokok($id)
+    {
+        $g = DB::table('riwayat_pangkats')->where('pegawai_id',$id)->first();
+
+        if ($g==null) //jika tidak ada
+            return 0;
+        else
+            return $g->gaji_pokok;
+    }
+
 }

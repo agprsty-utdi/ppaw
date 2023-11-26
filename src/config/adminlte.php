@@ -355,6 +355,11 @@ return [
             'url'        => 'riwayat-pangkat',
         ],
         [
+            'text'       => 'Gaji Pegawai',
+            'icon_color' => 'red',
+            'url'        => 'gaji',
+        ],
+        [
             'text'       => 'warning',
             'icon_color' => 'yellow',
             'url'        => '#',
